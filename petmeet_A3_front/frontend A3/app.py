@@ -45,14 +45,13 @@ from flask import redirect, url_for
 def cadastro():
     # Obtendo dados do formulário
     first_name = request.form['first_name']
-    last_name = request.form['last_name']
-    email_or_phone = request.form['email_or_phone']
+    email = request.form['email']
     new_password = request.form['new_password']
 
     # Montando payload para enviar à API
     payload = {
-        'Nome': f"{first_name} {last_name}",
-        'Email': email_or_phone,
+        'Nome': first_name,
+        'Email': email,
         'Senha': new_password,
     }
 

@@ -1,5 +1,4 @@
 from flask import Flask
-#from pets_routes import register_pet_routes
 from users_routes import register_users_routes
 from database_setup import *
 
